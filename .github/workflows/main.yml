@@ -1,3 +1,9 @@
-- uses: azure/container-scan@v0
-  with:
-    image-name: python3
+on: [push]
+
+jobs:
+  build-secure-and-push:
+    runs-on: ubuntu-latest
+    steps:    
+      - uses: azure/container-scan@v0
+        with:
+          image-name: python3
